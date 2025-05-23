@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 224 71% 4%;
+    /* Dark Blue */
+    --card: 0 0% 100%;
+    /* White */
+    --card-foreground: 224 71% 4%;
+    /* Dark Blue */
+    --popover: 0 0% 100%;
+    /* White */
+    --popover-foreground: 224 71% 4%;
+    /* Dark Blue */
+    --primary: 210 40% 50%;
+    /* Modern Blue */
+    --primary-foreground: 0 0% 100%;
+    /* White */
+    --secondary: 210 40% 96.1%;
+    /* Light Blue-Gray */
+    --secondary-foreground: 210 40% 50%;
+    /* Modern Blue */
+    --muted: 210 40% 96.1%;
+    /* Light Blue-Gray */
+    --muted-foreground: 210 40% 40%;
+    /* Muted Blue-Gray */
+    --accent: 210 40% 90%;
+    /* Light Accent Blue */
+    --accent-foreground: 210 40% 50%;
+    /* Modern Blue */
+    --destructive: 0 72% 51%;
+    /* Modern Red */
+    --destructive-foreground: 0 0% 100%;
+    /* White */
+    --border: 210 40% 85%;
+    /* Light Border Blue */
+    --input: 210 40% 85%;
+    /* Light Border Blue */
+    --ring: 210 40% 50%;
+    /* Modern Blue */
+    --radius: 0.5rem;
+
+    --hero-pattern-dot: #3b82f6;
+    /* Blue from gradient */
+    --hero-pattern-bg: #ffffff;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    /* Dark Blue */
+    --foreground: 0 0% 98%;
+    /* Almost White */
+    --card: 222 47% 11%;
+    /* Darker Blue */
+    --card-foreground: 0 0% 98%;
+    /* Almost White */
+    --popover: 222 47% 11%;
+    /* Darker Blue */
+    --popover-foreground: 0 0% 98%;
+    /* Almost White */
+    --primary: 210 40% 70%;
+    /* Lighter Modern Blue */
+    --primary-foreground: 224 71% 4%;
+    /* Dark Blue */
+    --secondary: 222 47% 11%;
+    /* Darker Blue */
+    --secondary-foreground: 0 0% 98%;
+    /* Almost White */
+    --muted: 222 47% 11%;
+    /* Darker Blue */
+    --muted-foreground: 210 40% 60%;
+    /* Lighter Muted Blue-Gray */
+    --accent: 222 47% 18%;
+    /* Dark Accent Blue */
+    --accent-foreground: 0 0% 98%;
+    /* Almost White */
+    --destructive: 0 63% 30%;
+    /* Darker Modern Red */
+    --destructive-foreground: 0 0% 98%;
+    /* Almost White */
+    --border: 222 47% 18%;
+    /* Dark Border Blue */
+    --input: 222 47% 18%;
+    /* Dark Border Blue */
+    --ring: 210 40% 70%;
+    /* Lighter Modern Blue */
+
+    --hero-pattern-dot: #a7c5eb;
+    /* Lighter blue for dark mode */
+    --hero-pattern-bg: hsl(var(--background));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    transition-property: background-color, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+}
+
+.dark .gradient-text {
+  @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:opacity-90;
+}
+
+.dark .gradient-bg {
+  @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-primary-foreground hover:opacity-90;
+}
+
+.hero-pattern {
+  background-color: var(--hero-pattern-bg);
+  background-image: radial-gradient(var(--hero-pattern-dot) 0.5px, var(--hero-pattern-bg) 0.5px);
+  background-size: 10px 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-custom {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
