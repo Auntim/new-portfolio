@@ -31,7 +31,7 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-1 flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 text-sm"
           >
-            {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
+            {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}

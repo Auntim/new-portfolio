@@ -2,7 +2,7 @@
 
 import React, { useMemo, useRef, useEffect, useCallback } from 'react';
 const FALLBACK = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" ' + 'width="160" height="220"><rect width="100%" height="100%" ' + 'fill="%23e2e8f0"/><text x="50%" y="50%" dominant-baseline="middle"' + ' text-anchor="middle" fill="%234a5568" font-size="18">Image</text></svg>';
-const DEFAULT_IMAGES = ['https://i.ibb.co.com/P69Y1Wb/Screenshot-14.png', 'https://i.pinimg.com/1200x/6e/4c/39/6e4c394783c731f261f295e7ffd1deed.jpg', 'https://i.pinimg.com/1200x/1e/0c/1c/1e0c1c9c868bf07b4c27a275fb3087af.jpg', 'https://i.pinimg.com/736x/30/91/09/3091098a15810ddbbd58d5e007bc7207.jpg', 'https://i.pinimg.com/736x/07/cf/4a/07cf4a3a6f4144b4c7ac8e2ec5978dc1.jpg', 'https://i.pinimg.com/736x/5d/bf/f2/5dbff2b4c0fdcb9815e989f0db386f95.jpg'];
+const DEFAULT_IMAGES = ['https://i.ibb.co.com/S4wr06jH/profile-1.jpg', 'https://i.ibb.co.com/ycDrj27z/profile-2.jpg', 'https://i.ibb.co.com/MxrS4hgB/Screenshot-30.png', 'https://i.ibb.co.com/xq5sjzrD/programming-profile.jpg', 'https://i.ibb.co.com/SD3kkwpC/Whats-App-Image-2025-08-12-at-12-51-51-AM.jpg', 'https://i.ibb.co.com/ycDrj27z/profile-2.jpg',];
 const CARD_W = 200;
 const CARD_H = 240;
 const RADIUS = 240;

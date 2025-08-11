@@ -8,8 +8,8 @@ import ThreeDCarousel from './ThreeDCarousel';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center hero-pattern section-padding pt-24">
-      <div className="container-custom">
+    <section id="home" className="min-h-screen w-10/12 flex mx-auto items-center hero-pattern section-padding pt-24">
+      <div className="container-custom ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
