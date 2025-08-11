@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Layout, Database, Server, Figma, LineChart } from 'lucide-react';
+import { Code, Layout, Database, Server, Figma, LineChart, LogIn } from 'lucide-react';
 
 const skillsCategories = [
   {
@@ -12,23 +12,19 @@ const skillsCategories = [
   {
     icon: <Server className="h-6 w-6" />,
     title: 'Backend Development',
-    skills: ['Node.js', 'Express', 'RESTful APIs', 'Authentication']
+    skills: ['Node.js', 'Express', 'RESTful APIs',]
   },
   {
     icon: <Database className="h-6 w-6" />,
     title: 'Database Management',
-    skills: ['MongoDB', 'Firebase', 'Git']
+    skills: ['MongoDB', 'Github']
   },
   {
-    icon: <Layout className="h-6 w-6" />,
-    title: 'UI/UX Design',
-    skills: ['User Research', 'Design Systems', 'User Testing']
+    icon: <LogIn className="h-6 w-6" />,
+    title: 'Authentication',
+    skills: ['Firebase', 'Clerk', 'User Testing']
   },
-  {
-    icon: <Figma className="h-6 w-6" />,
-    title: 'Design Tools',
-    skills: ['Figma', 'photoshop', 'Illustrator']
-  },
+
   {
     icon: <LineChart className="h-6 w-6" />,
     title: 'Other Skills',
@@ -108,32 +104,7 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 p-8 bg-card rounded-xl shadow-md border"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <h3 className="text-4xl font-bold gradient-text mb-2">2+</h3>
-              <p className="text-muted-foreground">Years of Experience</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl font-bold gradient-text mb-2">20+</h3>
-              <p className="text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold gradient-text mb-2">Still learning Progress</h3>
-              <p className="text-muted-foreground">Happy Clients</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl font-bold gradient-text mb-2">6+</h3>
-              <p className="text-muted-foreground">Technologies Mastered</p>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

@@ -52,7 +52,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
             <p className="text-muted-foreground mb-6">
-              I'm a Frontend developer with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
+              I'm a <span className='text-cyan-400'>Frontend developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
             </p>
             <p className="text-muted-foreground mb-6">
               I specialize in creating responsive, accessible, and performant web applications using modern technologies. My approach combines technical expertise with a deep understanding of user needs to deliver solutions that not only work flawlessly but also provide exceptional user experiences.
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Education</h4>
-                  <p className="text-sm text-muted-foreground">B.Sc Computer Science & Engineering</p>
+                  <p className="text-sm text-muted-foreground">B.Sc in Computer Science & Engineering</p>
                 </div>
               </div>
             </div>

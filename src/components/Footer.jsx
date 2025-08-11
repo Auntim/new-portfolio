@@ -8,7 +8,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-gray-300/40 py-12 border-t">
+    <footer className="bg-black/20 py-12 border-t">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 items-center">
           <motion.div
@@ -70,9 +70,9 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground"
+          className="border-t border-border pt-8 flex flex-col sm:flex-row justify-center  items-center text-sm text-muted-foreground"
         >
-          <p>&copy; {currentYear} .Auntim Hossen Saikat All rights reserved.</p>
+          <p className='text-center'>&copy; {currentYear} .Auntim Hossen Saikat All rights reserved.</p>
 
         </motion.div>
       </div>

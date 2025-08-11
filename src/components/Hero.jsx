@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 import image1 from '@/assets/images/profile 1.jpeg';
+import ThreeDCarousel from './ThreeDCarousel';
 
 const Hero = () => {
   return (
@@ -91,10 +92,12 @@ const Hero = () => {
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 mt-6 md:mt-0"></div>
+              {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 mt-6 md:mt-0"></div>
               <div className="relative overflow-hidden rounded-full border-4 border-white shadow-lg ">
                 <img alt="Professional portrait of Alex Johnson" className="w-64 h-64 md:w-[400px] md:h-[400px] object-cover" src={image1} />
-              </div>
+
+              </div> */}
+              <ThreeDCarousel />
             </div>
           </motion.div>
         </div>
