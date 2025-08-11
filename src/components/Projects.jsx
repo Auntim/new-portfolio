@@ -1,10 +1,7 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-
-const projectCategories = ['All', 'Web App', 'Mobile', 'UI/UX'];
+import { ExternalLink, Github } from 'lucide-react';
 
 const projectsData = [
   {
@@ -53,7 +50,7 @@ const projectsData = [
     description: 'A responsive website for an eco-adventure company, showcasing tours, booking options, and customer testimonials.',
     category: 'Web App',
     image: 'https://i.ibb.co/wRkfQNq/Screenshot-26.png',
-    technologies: ['React', 'Socket.io', 'Express',],
+    technologies: ['React', 'Socket.io', 'Express'],
     liveLink: 'https://eco-adventure-b6481.web.app/',
     githubLink: 'https://github.com/Auntim/assign-ment-09',
   },
@@ -61,7 +58,7 @@ const projectsData = [
     id: 6,
     title: 'Player Management App',
     description: 'Welcome to the Player Management App! This application allows users to manage a roster of players, adding and removing them as needed while keeping track of their selected players and available options.',
-    category: 'web app',
+    category: 'Web App',
     image: 'https://i.ibb.co/1JQWxJFk/cricket.png',
     technologies: ['HTML/CSS', 'Firebase', 'Javascript'],
     liveLink: 'https://storied-biscuit-e04c76.netlify.app/',
@@ -70,26 +67,11 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [visibleProjects, setVisibleProjects] = useState(6);
-
-  const filteredProjects = activeCategory === 'All'
-    ? projectsData
-    : projectsData.filter(project => project.category === activeCategory);
-
-  const displayedProjects = filteredProjects.slice(0, visibleProjects);
-
-  const loadMoreProjects = () => {
-    setVisibleProjects(prev => Math.min(prev + 2, filteredProjects.length));
-  };
-
   const container = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
+      transition: { staggerChildren: 0.2 }
     }
   };
 
@@ -105,6 +87,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding">
       <div className="container-custom">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -123,62 +106,40 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
-        >
-          {projectCategories.map((category) => (
-            <Button
-              key={category}
-              variant={activeCategory === category ? "default" : "outline"}
-              className={activeCategory === category ? "gradient-bg" : ""}
-              onClick={() => {
-                setActiveCategory(category);
-                setVisibleProjects(4);
-              }}
-            >
-              {category}
-            </Button>
-          ))}
-        </motion.div>
-
+        {/* Projects Grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {displayedProjects.map((project) => (
+          {projectsData.map((project) => (
             <motion.div
               key={project.id}
               variants={item}
               className="bg-card rounded-xl overflow-hidden shadow-md card-hover border"
             >
-              <div className="relative overflow-hidden h-64">
-                <img alt={`Screenshot of ${project.title}`} className="w-full h-full object-cover p-3" src={project.image} />
+              <div className="relative overflow-hidden h-48">
+                <img
+                  alt={`Screenshot of ${project.title}`}
+                  className="w-full h-full object-cover p-3"
+                  src={project.image}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                  <div className="p-6">
-                    <span className="inline-block px-2 py-1 text-xs font-medium text-white bg-blue-600 rounded mb-2">
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
-                  </div>
+
                 </div>
               </div>
 
               <div className="p-6">
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <div className="mb-2">
+                  <h3 className="text-xl font-bold text-white mb-1">Name : {project.title}</h3>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 text-xs font-medium bg-secondary rounded"
-                    >
+                    <span key={index} className="px-2 py-1 text-xs font-medium bg-secondary rounded">
                       {tech}
                     </span>
                   ))}
@@ -200,19 +161,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {visibleProjects < filteredProjects.length && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="flex justify-center mt-12"
-          >
-            <Button onClick={loadMoreProjects} className="gradient-bg">
-              Load More <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </motion.div>
-        )}
       </div>
     </section>
   );

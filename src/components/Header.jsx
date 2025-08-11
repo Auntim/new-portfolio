@@ -54,7 +54,7 @@ const Header = ({ scrollY }) => {
           transition={{ duration: 0.5 }}
           className="text-2xl font-bold gradient-text"
         >
-          AUNTIM'S DEV
+          AUNTIM'S
         </motion.a>
 
         <div className="flex items-center">

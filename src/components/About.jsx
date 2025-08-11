@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, Award, Briefcase, GraduationCap } from 'lucide-react';
+import Spider from './Spider';
 
 const About = () => {
   const fadeInUp = {
@@ -30,7 +31,7 @@ const About = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,9 +40,8 @@ const About = () => {
             className="relative"
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl blur-lg"></div>
-            <div className="relative overflow-hidden rounded-xl shadow-lg">
-              <img alt="Alex working on a project" className="w-full h-auto rounded-xl" src="https://images.unsplash.com/photo-1507146815454-9faa99d579aa" />
-            </div>
+
+            <Spider />
           </motion.div>
 
           <motion.div
