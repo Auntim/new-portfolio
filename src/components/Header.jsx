@@ -2,8 +2,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Sun, Moon, Download } from 'lucide-react';
+import { Menu, X, Sun, Moon, Download, Link } from 'lucide-react';
 import { ThemeContext } from '@/App';
+import { ConfettiButton } from "@/components/lightswind/confetti-button";
 
 
 const navItems = [
@@ -52,10 +53,14 @@ const Header = ({ scrollY }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold gradient-text"
+          className="text-2xl font-bold gradient-text bbh-regular ml-0 md:ml-24"
         >
-          AUNTIM'S
+          AUNTIM
         </motion.a>
+
+
+        {/* <img src="/logo.jpeg" alt="logo" className='w-20 h-10 bg-transparent' /> */}
+
 
         <div className="flex items-center">
           {/* Desktop Navigation */}
@@ -68,8 +73,8 @@ const Header = ({ scrollY }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeSection === item.href.substring(1)
-                  ? 'text-primary font-semibold'
-                  : 'text-muted-foreground hover:text-primary hover:bg-secondary'
+                  ? 'text-primary font-semibold border-b-2 border-primary pb-1'
+                  : 'text-muted-foreground hover:text-primary hover:text-slate-100'
                   }`}
                 onClick={(e) => {
                   e.preventDefault();
@@ -81,18 +86,19 @@ const Header = ({ scrollY }) => {
                 {item.name}
               </motion.a>
             ))}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
             >
-              <a href="/resume.pdf" download>
+              <a href="/Simple-Resume.pdf" download>
                 <Button className="gradient-bg">
                   <Download className="mr-2 h-4 w-4" /> Resume
                 </Button>
               </a>
-            </motion.div>
+            </motion.div> */}
           </nav>
+          <ConfettiButton />
 
           {/* Theme Toggle Button */}
           <motion.div
@@ -171,7 +177,7 @@ const Header = ({ scrollY }) => {
                   {item.name}
                 </a>
               ))}
-              <a href="/resume.pdf" download>
+              <a href="/Simple-Resume.pdf" download>
                 <Button className="gradient-bg">
                   <Download className="mr-2 h-4 w-4" /> Resume
                 </Button>

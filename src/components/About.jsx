@@ -20,9 +20,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-16"
         >
-          <motion.span variants={fadeInUp} className="inline-block px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full mb-4">
-            About Me
-          </motion.span>
+
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4">
             My <span className="gradient-text">Journey</span>
           </motion.h2>

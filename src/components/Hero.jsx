@@ -3,8 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
-import image1 from '@/assets/images/profile 1.jpeg';
+// import image1 from '@/assets/images/profile 1.jpeg';
 import ThreeDCarousel from './ThreeDCarousel';
+import Example from './ShimmerButton';
+import ShimmerButton from './ShimmerButton';
+import SeraButtonView from './SeraButtonView';
 
 const Hero = () => {
   return (
@@ -17,14 +20,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="order-2 lg:order-1"
           >
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-blue-100 text-blue-700"
-            >
-              Frontend Developer
-            </motion.span>
+
 
             <motion.h1
               initial={{ opacity: 0 }}
@@ -34,12 +30,23 @@ const Hero = () => {
             >
               Hi, I'm <span className="gradient-text">Auntim Hossen Saikat</span>
             </motion.h1>
+            {/* <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-block  py-1.5 mb-4 text-2xl font-medium rounded-full  text-orange-400 border-2 px-3 hover:scale-110"
+            >
+              Frontend Developer
+            </motion.span> */}
+            {/* <Example /> */}
+            {/* <ShimmerButton /> */}
+            <SeraButtonView />
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg text-muted-foreground mb-8 max-w-lg"
+              className="text-lg text-muted-foreground mb-8 max-w-lg mt-4"
             >
               I create beautiful, functional, and user-friendly digital experiences. With expertise in both frontend and backend technologies, I bring ideas to life.
             </motion.p>
