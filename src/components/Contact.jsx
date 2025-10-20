@@ -77,7 +77,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding"
+      style={{
+        background: "#000000",
+        backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+        backgroundSize: "30px 30px",
+        backgroundPosition: "0 0",
+      }}
+    >
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

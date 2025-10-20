@@ -8,7 +8,9 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-black/20 py-12 border-t">
+    <footer className="bg-black/20 py-12 border-t"
+
+    >
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 items-center">
           <motion.div

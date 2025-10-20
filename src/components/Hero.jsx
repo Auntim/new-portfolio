@@ -5,14 +5,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 // import image1 from '@/assets/images/profile 1.jpeg';
 import ThreeDCarousel from './ThreeDCarousel';
-import Example from './ShimmerButton';
-import ShimmerButton from './ShimmerButton';
 import SeraButtonView from './SeraButtonView';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen w-10/12 flex mx-auto items-center hero-pattern section-padding pt-24">
-      <div className="container-custom ">
+    <section id="home" className="min-h-screen flex mx-auto items-center hero-pattern section-padding pt-24"
+      style={{
+        background: "#000000",
+        backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+        backgroundSize: "30px 30px",
+        backgroundPosition: "0 0",
+      }}
+    >
+      <div className="px-4 sm:px-6 lg:px-8 w-10/12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -114,3 +121,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+

@@ -2,7 +2,13 @@
 
 import React, { useMemo, useRef, useEffect, useCallback } from 'react';
 const FALLBACK = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" ' + 'width="160" height="220"><rect width="100%" height="100%" ' + 'fill="%23e2e8f0"/><text x="50%" y="50%" dominant-baseline="middle"' + ' text-anchor="middle" fill="%234a5568" font-size="18">Image</text></svg>';
-const DEFAULT_IMAGES = ['https://i.ibb.co.com/S4wr06jH/profile-1.jpg', 'https://i.ibb.co.com/ycDrj27z/profile-2.jpg', 'https://i.ibb.co.com/MxrS4hgB/Screenshot-30.png', 'https://i.ibb.co.com/xq5sjzrD/programming-profile.jpg', 'https://i.ibb.co.com/SD3kkwpC/Whats-App-Image-2025-08-12-at-12-51-51-AM.jpg', 'https://i.ibb.co.com/ycDrj27z/profile-2.jpg',];
+const DEFAULT_IMAGES = [
+    'https://i.ibb.co.com/S4wr06jH/profile-1.jpg',
+    'https://i.ibb.co.com/ycDrj27z/profile-2.jpg',
+    'https://i.ibb.co.com/MxrS4hgB/Screenshot-30.png',
+    'https://i.ibb.co.com/F432MxQP/corporate-headshot-2.png',
+    'https://i.ibb.co.com/SD3kkwpC/Whats-App-Image-2025-08-12-at-12-51-51-AM.jpg',
+    'https://i.ibb.co.com/ycDrj27z/profile-2.jpg',];
 const CARD_W = 200;
 const CARD_H = 240;
 const RADIUS = 240;

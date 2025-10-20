@@ -55,7 +55,7 @@ const Header = ({ scrollY }) => {
           transition={{ duration: 0.5 }}
           className="text-2xl font-bold gradient-text bbh-regular ml-0 md:ml-24"
         >
-          AUNTIM
+          AUNTIM.DEV
         </motion.a>
 
 
@@ -64,7 +64,7 @@ const Header = ({ scrollY }) => {
 
         <div className="flex items-center">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-1 ">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -98,10 +98,13 @@ const Header = ({ scrollY }) => {
               </a>
             </motion.div> */}
           </nav>
-          <ConfettiButton />
+          <div className='ml-2'>
+            <ConfettiButton />
+          </div>
+
 
           {/* Theme Toggle Button */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: navItems.length * 0.1 + 0.2 }}
@@ -132,7 +135,7 @@ const Header = ({ scrollY }) => {
                 )}
               </AnimatePresence>
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           {/* Mobile Menu Button */}
           <Button

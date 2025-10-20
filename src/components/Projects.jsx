@@ -4,8 +4,29 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projectsData = [
+
   {
     id: 1,
+    title: 'Ai-Fiesta(All Ai Tools In One)',
+    description: 'Welcome to Ai-Fiesta, Ai-Fiesta offers a suite of powerful features powered by cutting-edge AI technologies.',
+    category: 'Mobile',
+    image: 'https://i.ibb.co.com/LDw5jzVn/Screenshot-2025-10-20-222548.png',
+    technologies: ['Next.js', 'Clerk Auth', 'Redux', 'ShadcnUI', 'Ai APIs', 'Vercel', 'Tailwind CSS', 'Firebase'],
+    liveLink: 'https://ai-fiesta-v2.vercel.app/',
+    githubLink: 'https://github.com/Auntim/Ai-fiesta-v2',
+  },
+  {
+    id: 2,
+    title: 'K72',
+    description: ' K72 is an agency that builds brands from every angle. Today, tomorrow and years from now. We think the best sparks fly when comfort zones get left behind and friction infuses our strategies, brands and communications with real feeling. ',
+    category: 'Web App',
+    image: 'https://i.ibb.co.com/PvCZ6FNN/Screenshot-2025-10-20-223546.png',
+    technologies: ['React', 'Gsap', 'Express', 'Tailwind CSS', 'Node.js',],
+    liveLink: 'https://k72-project-jet.vercel.app/',
+    githubLink: 'https://github.com/Auntim/k72-project',
+  },
+  {
+    id: 3,
     title: 'Pet Adoption Platform',
     description: 'A full-featured Pet adoption platform with product management, cart functionality, and payment processing.',
     category: 'Web App',
@@ -15,27 +36,17 @@ const projectsData = [
     githubLink: 'https://github.com/Auntim/pet-adoption-A12-client',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Lawer Management web',
     description: 'Lewio is an innovative service-sharing platform designed exclusively for lawyers and legal professionals. It empowers users to add, browse, book, and manage legal services seamlessly.',
     category: 'Web App',
     image: 'https://i.ibb.co/23BfR7FK/Screenshot-84.png',
-    technologies: ['React.js', 'Firebase', 'MongoDb', 'Tailwind CSS'],
+    technologies: ['React.js', 'Firebase', 'MongoDb', 'Tailwind CSS', ' Express JS'],
     liveLink: 'https://laywer-service.web.app/',
     githubLink: 'https://github.com/Auntim/assign-ment-11-client-side',
   },
   {
-    id: 3,
-    title: 'Movie Portal',
-    description: 'Welcome to Movie Portal, your ultimate destination for discovering, exploring, and managing your favorite movies',
-    category: 'Mobile',
-    image: 'https://i.ibb.co/MTCgK3n/movie.png',
-    technologies: ['React.js', 'react-router-dom', 'Redux', 'Express', 'MongoDB'],
-    liveLink: 'https://movie-store-fb2c5.web.app/',
-    githubLink: 'https://github.com/Auntim/assign-ment-10-client-side',
-  },
-  {
-    id: 4,
+    id: 5,
     title: 'Gadget Heaven',
     description: 'Gadget Heaven is an interactive e-commerce website designed to offer a wide variety of tech products, from the latest gadgets to essential accessories. The project showcases a clean, user-friendly interface, dynamic data handling, and interactive features.',
     category: 'UI/UX',
@@ -44,16 +55,7 @@ const projectsData = [
     liveLink: 'https://helpful-crumble-73f4c4.netlify.app/',
     githubLink: 'https://github.com/Auntim/Gadget-Heaven',
   },
-  {
-    id: 5,
-    title: 'Eco-Adventure Website',
-    description: 'A responsive website for an eco-adventure company, showcasing tours, booking options, and customer testimonials.',
-    category: 'Web App',
-    image: 'https://i.ibb.co/wRkfQNq/Screenshot-26.png',
-    technologies: ['React', 'Socket.io', 'Express'],
-    liveLink: 'https://eco-adventure-b6481.web.app/',
-    githubLink: 'https://github.com/Auntim/assign-ment-09',
-  },
+
   {
     id: 6,
     title: 'Player Management App',
@@ -85,7 +87,16 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding"
+      style={{
+        background: "#000000",
+        backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+        backgroundSize: "30px 30px",
+        backgroundPosition: "0 0",
+      }}
+    >
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -137,7 +148,7 @@ const Projects = () => {
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="px-2 py-1 text-xs font-medium bg-secondary rounded">
+                    <span key={index} className="px-2 py-1 text-xs font-medium bg-secondary rounded border border-blue-600 hover:scale-90 transition-all">
                       {tech}
                     </span>
                   ))}

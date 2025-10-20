@@ -12,8 +12,19 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="section-padding bg-secondary/30">
-      <div className="container-custom">
+    <section id="about" className="section-padding bg-secondary/30"
+      style={{
+        background: "#000000",
+        backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+        backgroundSize: "30px 30px",
+        backgroundPosition: "0 0",
+      }}
+    >
+      <div className="container-custom"
+
+      >
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -50,7 +61,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
             <p className="text-muted-foreground mb-6">
-              I'm a <span className='text-cyan-400'>Frontend developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
+              I'm a <span className='text-cyan-300'>Frontend developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
             </p>
             <p className="text-muted-foreground mb-6">
               I specialize in creating responsive, accessible, and performant web applications using modern technologies. My approach combines technical expertise with a deep understanding of user needs to deliver solutions that not only work flawlessly but also provide exceptional user experiences.

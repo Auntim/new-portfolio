@@ -53,7 +53,16 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="section-padding bg-secondary/30">
+    <section id="skills" className="section-padding bg-secondary/30"
+      style={{
+        background: "#000000",
+        backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+        backgroundSize: "30px 30px",
+        backgroundPosition: "0 0",
+      }}
+    >
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

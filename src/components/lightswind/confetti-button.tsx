@@ -154,33 +154,35 @@ const ConfettiButton = React.forwardRef<HTMLButtonElement, ConfettiButtonProps>(
     };
 
     return (
-      <button
-        ref={(node) => {
-          if (typeof ref === "function") ref(node);
-          else if (ref) ref.current = node;
-          buttonRef.current = node;
-        }}
-        className={cn(confettiButtonVariants({ variant, size, animation }), className)}
-        onClick={(e) => {
-          if (scriptLoaded) {
-            triggerConfetti();
-          }
-          props.onClick?.(e);
-        }}
-        onMouseEnter={triggerOnHover ? () => triggerConfetti() : undefined}
-        disabled={loading || props.disabled}
-        {...props}
-      >
-        {loading && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
-        {!loading && icon && iconPosition === "left" && (
-          <span className="mr-1">{icon}</span>
-        )}
-        {children}
-        {!loading && icon && iconPosition === "right" && (
-          <span className="ml-1">{icon}</span>
-        )}
-        Resume
-      </button>
+      <a href="/Simple-Resume.pdf" download>
+        <button
+          ref={(node) => {
+            if (typeof ref === "function") ref(node);
+            else if (ref) ref.current = node;
+            buttonRef.current = node;
+          }}
+          className={cn(confettiButtonVariants({ variant, size, animation }), className)}
+          onClick={(e) => {
+            if (scriptLoaded) {
+              triggerConfetti();
+            }
+            props.onClick?.(e);
+          }}
+          onMouseEnter={triggerOnHover ? () => triggerConfetti() : undefined}
+          disabled={loading || props.disabled}
+          {...props}
+        >
+          {loading && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
+          {!loading && icon && iconPosition === "left" && (
+            <span className="mr-1">{icon}</span>
+          )}
+          {children}
+          {!loading && icon && iconPosition === "right" && (
+            <span className="ml-1">{icon}</span>
+          )}
+          Resume
+        </button>
+      </a>
     );
   }
 );
