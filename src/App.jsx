@@ -51,10 +51,10 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="min-h-screen bg-background">
+      <div className="roboto min-h-screen bg-background">
         <Header scrollY={scrollY} />
 
-        <main>
+        <main className='roboto'>
           <Hero />
           <About />
           <Projects />

@@ -53,13 +53,10 @@ const Header = ({ scrollY }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold gradient-text bbh-regular ml-0 md:ml-24"
+          className="text-xl md:text-2xl font-bold gradient-text bbh-regular ml-0 md:ml-24"
         >
           AUNTIM.DEV
         </motion.a>
-
-
-        {/* <img src="/logo.jpeg" alt="logo" className='w-20 h-10 bg-transparent' /> */}
 
 
         <div className="flex items-center">
@@ -86,56 +83,12 @@ const Header = ({ scrollY }) => {
                 {item.name}
               </motion.a>
             ))}
-            {/* <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-            >
-              <a href="/Simple-Resume.pdf" download>
-                <Button className="gradient-bg">
-                  <Download className="mr-2 h-4 w-4" /> Resume
-                </Button>
-              </a>
-            </motion.div> */}
+
           </nav>
           <div className='ml-2'>
             <ConfettiButton />
           </div>
 
-
-          {/* Theme Toggle Button */}
-          {/* <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: navItems.length * 0.1 + 0.2 }}
-            className="ml-4"
-          >
-            <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
-              <AnimatePresence mode="wait" initial={false}>
-                {theme === 'light' ? (
-                  <motion.div
-                    key="sun"
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Sun size={20} />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="moon"
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Moon size={20} />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </Button>
-          </motion.div> */}
 
           {/* Mobile Menu Button */}
           <Button

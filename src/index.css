@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+.roboto {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+
+}
 
 .bbh-regular {
   font-family: "BBH Sans Bartle", sans-serif;
