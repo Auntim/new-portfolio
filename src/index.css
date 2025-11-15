@@ -17,6 +17,14 @@
   font-style: normal;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -126,6 +134,10 @@
 
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+}
+
+.gradient-text2 {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-purple-700 to-blue-500;
 }
 
 .dark .gradient-text {

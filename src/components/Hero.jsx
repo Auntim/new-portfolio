@@ -3,13 +3,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
-// import image1 from '@/assets/images/profile 1.jpeg';
+import image1 from '@/assets/images/profile4.png';
 import ThreeDCarousel from './ThreeDCarousel';
-import SeraButtonView from './SeraButtonView';
+import TypingText from './TypingText';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex mx-auto items-center hero-pattern section-padding pt-24"
+    <section id="home" className="min-h-screen flex mx-auto items-center hero-pattern section-padding pt-24 overflow-hidden w-screen"
       style={{
         background: "#000000",
         backgroundImage: `
@@ -19,7 +19,7 @@ const Hero = () => {
         backgroundPosition: "0 0",
       }}
     >
-      <div className="px-4 sm:px-6 lg:px-8 w-10/12 mx-auto">
+      <div className="px-4 sm:px-6 lg:px-8 w-full sm:w-11/12 lg:w-10/12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -28,32 +28,30 @@ const Hero = () => {
             className="order-2 lg:order-1"
           >
 
-
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+              className="text-3xl md:text-5xl lg:text-5xl font-bold mb-6"
             >
-              Hi, I'm <span className="gradient-text">Auntim Hossen Saikat</span>
+              Hi, I'm{" "}
+              <span className="gradient-text">
+                <TypingText
+                  texts={[
+                    "Auntim Hossen Saikat",
+                    "Full-Stack Enthusiast",
+                  ]}
+                />
+              </span>
             </motion.h1>
-            {/* <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-block  py-1.5 mb-4 text-2xl font-medium rounded-full  text-orange-400 border-2 px-3 hover:scale-110"
-            >
-              Frontend Developer
-            </motion.span> */}
-            {/* <Example /> */}
-            {/* <ShimmerButton /> */}
-            <SeraButtonView />
-
+            <div className='pt-2 md:pt-6'>
+              <button className='roboto border-2 border-orange-500 px-6 py-3 rounded-2xl shadow-lg text-xl font-semibold gradient-text2'>Frontend Developer</button>
+            </div>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg text-muted-foreground mb-8 max-w-lg mt-4"
+              className="text-lg text-muted-foreground mb-8 max-w-lg mt-8 text-justify"
             >
               I create beautiful, functional, and user-friendly digital experiences. With expertise in both frontend and backend technologies, I bring ideas to life.
             </motion.p>
@@ -106,12 +104,12 @@ const Hero = () => {
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative">
-              {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 mt-6 md:mt-0"></div>
-              <div className="relative overflow-hidden rounded-full border-4 border-white shadow-lg ">
-                <img alt="Professional portrait of Alex Johnson" className="w-64 h-64 md:w-[400px] md:h-[400px] object-cover" src={image1} />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 mt-6 md:mt-0"></div>
+              <div className="relative overflow-hidden rounded-xl md:rounded-full border-4 border-white shadow-lg ">
+                <img alt="Professional portrait" className="w-80 h-80 md:w-[400px] md:h-[400px] object-cover" src={image1} />
 
-              </div> */}
-              <ThreeDCarousel />
+              </div>
+              {/* <ThreeDCarousel /> */}
             </div>
           </motion.div>
         </div>

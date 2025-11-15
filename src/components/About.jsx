@@ -59,11 +59,11 @@ const About = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
-            <p className="text-muted-foreground mb-6">
-              I'm a <span className='text-cyan-300'>Frontend developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
+            <h3 className="text-2xl font-bold mb-4">Who Am I,</h3>
+            <p className="text-muted-foreground mb-6 text-wrap text-justify">
+              I'm a <span className='text-orange-500'>Frontend developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
             </p>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 text-justify">
               I specialize in creating responsive, accessible, and performant web applications using modern technologies. My approach combines technical expertise with a deep understanding of user needs to deliver solutions that not only work flawlessly but also provide exceptional user experiences.
             </p>
 
@@ -74,7 +74,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Experience</h4>
-                  <p className="text-sm text-muted-foreground">2+ Years</p>
+                  <p className="text-sm text-orange-300">2+ Years</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Projects</h4>
-                  <p className="text-sm text-muted-foreground">20+ Completed</p>
+                  <p className="text-sm text-orange-300">20+ Completed</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -92,7 +92,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Education</h4>
-                  <p className="text-sm text-muted-foreground">B.Sc in Computer Science & Engineering</p>
+                  <p className="text-sm text-orange-300">B.Sc in Computer Science & Engineering</p>
                 </div>
               </div>
             </div>

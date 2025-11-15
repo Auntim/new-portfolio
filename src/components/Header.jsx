@@ -18,7 +18,7 @@ const navItems = [
 const Header = ({ scrollY }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  // const { theme, toggleTheme } = useContext(ThemeContext);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -45,15 +45,15 @@ const Header = ({ scrollY }) => {
   }, [scrollY]);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container-custom flex items-center justify-between py-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+      <div className="container-custom flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
 
         <motion.a
           href="#home"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-xl md:text-2xl font-bold gradient-text bbh-regular ml-0 md:ml-24"
+          className="text-xl md:text-2xl font-bold gradient-text bbh-regular ml-2 md:ml-4"
         >
           AUNTIM.DEV
         </motion.a>
