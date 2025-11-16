@@ -126,7 +126,7 @@ const ThreeDCarousel = React.memo(({
             transform: `rotateY(${angle}deg) translateZ(${radius}px)`
         };
     }), [images, radius]);
-    return <div ref={parentRef} className="w-full h-full flex items-center justify-center overflow-hidden font-sans cursor-grab active:cursor-grabbing" style={{
+    return <div ref={parentRef} className="w-full h-full flex items-center justify-center overflow-hidden font-sans cursor-grab active:cursor-grabbing mt-1" style={{
         userSelect: 'none'
     }} onMouseDown={onMouseDown} onMouseMove={onMouseMove} onMouseUp={handleDragEnd} onMouseLeave={handleDragEnd} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={handleDragEnd}>
         <div className="relative" style={{
