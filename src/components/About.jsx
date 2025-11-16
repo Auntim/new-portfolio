@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, Award, Briefcase, GraduationCap } from 'lucide-react';
+import { Download, Award, Briefcase, GraduationCap, Calendar } from 'lucide-react';
 import Spider from './Spider';
 
 const About = () => {
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Projects</h4>
-                  <p className="text-sm text-orange-300">20+ Completed</p>
+                  <p className="text-sm text-orange-300">15+ Completed</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -92,7 +92,9 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Education</h4>
-                  <p className="text-sm text-orange-300">B.Sc in Computer Science & Engineering</p>
+                  <p className="text-[14px] text-orange-300">B.Sc in Computer Science & Engineering</p>
+                  <p className="text-sm text-gray-400 mt-2">University of Creative Technology, Chattogram</p>
+                  <span className='flex gap-1 items-center text-gray-400 mt-1 text-sm'><Calendar className='w-4 h-4' /> 2022 - current</span>
                 </div>
               </div>
             </div>
