@@ -113,7 +113,7 @@ const Header = ({ scrollY }) => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-background border-t"
           >
-            <nav className="container-custom py-4 flex flex-col space-y-2">
+            <nav className=" py-4 flex flex-col space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -133,11 +133,6 @@ const Header = ({ scrollY }) => {
                   {item.name}
                 </a>
               ))}
-              <a href="/Simple-Resume.pdf" download>
-                <Button className="gradient-bg">
-                  <Download className="mr-2 h-4 w-4" /> Resume
-                </Button>
-              </a>
             </nav>
           </motion.div>
         )}

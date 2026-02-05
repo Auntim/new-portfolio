@@ -33,7 +33,7 @@ const About = () => {
         >
 
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4">
-            My <span className="gradient-text">Journey</span>
+            About <span className="gradient-text">Me</span>
           </motion.h2>
           <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-muted-foreground">
             A passionate developer with a keen eye for design and a commitment to creating exceptional user experiences.

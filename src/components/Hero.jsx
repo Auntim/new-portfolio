@@ -32,7 +32,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-3xl md:text-5xl lg:text-5xl font-bold mb-6"
+              className="text-3xl md:text-5xl lg:text-4xl font-bold mb-6"
             >
               Hi, I'm{" "}
               <span className="gradient-text">
@@ -40,18 +40,17 @@ const Hero = () => {
                   texts={[
                     "Auntim Hossen Saikat",
                     "Full-Stack Enthusiast",
+                    'Web Developer'
                   ]}
                 />
               </span>
             </motion.h1>
-            <div className='pt-2 md:pt-6'>
-              <button className='roboto border-2 border-orange-500 px-6 py-3 rounded-2xl shadow-lg text-xl font-semibold gradient-text2'>Frontend Developer</button>
-            </div>
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg text-muted-foreground mb-8 max-w-lg mt-8 text-justify"
+              className="text-lg text-muted-foreground mb-8 max-w-lg mt-8 text-justify leading-tight tracking-wider"
             >
               I create beautiful, functional, and user-friendly digital experiences. With expertise in both frontend and backend technologies, I bring ideas to life.
             </motion.p>
@@ -64,7 +63,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="gradient-bg"
+                className=" rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none"
                 onClick={() => document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work <ArrowRight className="ml-2 h-4 w-4" />
@@ -74,6 +73,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}
+                className=" rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none"
               >
                 Contact Me
               </Button>
@@ -85,13 +85,13 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex items-center gap-4 mt-8"
             >
-              <a href="https://github.com/Auntim" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://github.com/Auntim" className="text-white hover:text-foreground transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="https://www.linkedin.com/in/auntim-hossen-saikat/" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.linkedin.com/in/auntim-hossen-saikat/" className="text-white hover:text-foreground transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#" className="text-white hover:text-foreground transition-colors">
                 <Twitter className="h-6 w-6" />
               </a>
             </motion.div>
@@ -112,8 +112,11 @@ const Hero = () => {
               {/* <ThreeDCarousel /> */}
             </div>
           </motion.div>
+
         </div>
+
       </div>
+
     </section>
   );
 };
