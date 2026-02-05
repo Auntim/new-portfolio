@@ -108,7 +108,7 @@ const Projects = () => {
         >
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="text-[#ED985F]">Projects</span>
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
             Explore my recent work showcasing my skills and expertise in creating innovative digital solutions.

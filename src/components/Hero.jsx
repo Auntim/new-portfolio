@@ -35,7 +35,7 @@ const Hero = () => {
               className="text-3xl md:text-5xl lg:text-4xl font-bold mb-6"
             >
               Hi, I'm{" "}
-              <span className="gradient-text">
+              <span className="text-[#ED985F]">
                 <TypingText
                   texts={[
                     "Auntim Hossen Saikat",
@@ -63,7 +63,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className=" rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none"
+                className=" rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none bg-[#F7B980] text-sm font-semibold"
                 onClick={() => document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work <ArrowRight className="ml-2 h-4 w-4" />

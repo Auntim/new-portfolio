@@ -36,7 +36,7 @@ const confettiButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-[#F7B980]",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
         outline: "border bg-background hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -44,10 +44,10 @@ const confettiButtonVariants = cva(
         gradient: "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700",
       },
       size: {
-        default: "h-10 px-4 py-2 rounded-md",
+        default: "h-8 px-3 py-1 rounded-md",
         sm: "h-8 px-3 py-1 rounded-md text-sm",
-        lg: "h-12 px-6 py-3 rounded-md text-lg",
-        xl: "h-14 px-8 py-4 rounded-md text-xl",
+        lg: "h-12 px-6 py-3 rounded-md text-md",
+        xl: "h-14 px-8 py-4 rounded-md text-md",
         icon: "h-10 w-10 rounded-full",
         pill: "h-10 px-6 py-2 rounded-full",
       },
@@ -156,6 +156,7 @@ const ConfettiButton = React.forwardRef<HTMLButtonElement, ConfettiButtonProps>(
     return (
       <a href="/Simple-Resume.pdf" download>
         <button
+
           ref={(node) => {
             if (typeof ref === "function") ref(node);
             else if (ref) ref.current = node;

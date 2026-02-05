@@ -73,7 +73,7 @@ const Skills = () => {
         >
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Technical <span className="gradient-text">Skills</span>
+            Technical <span className="text-[#ED985F]">Skills</span>
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
             A comprehensive overview of my technical skills and areas of expertise in software development and design.

@@ -97,7 +97,7 @@ const Contact = () => {
         >
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's <span className="gradient-text">Connect</span>
+            Let's <span className="text-[#ED985F]">Connect</span>
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
             Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!

@@ -32,8 +32,8 @@ const About = () => {
           className="text-center mb-16"
         >
 
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 ">
+            About <span className="text-[#ED985F]">Me</span>
           </motion.h2>
           <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-muted-foreground">
             A passionate developer with a keen eye for design and a commitment to creating exceptional user experiences.
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Projects</h4>
-                  <p className="text-sm text-orange-300">15+ Completed</p>
+                  <p className="text-sm text-orange-300">18+ Completed</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -92,7 +92,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Education</h4>
-                  <p className="text-[14px] text-orange-300">B.Sc in Computer Science & Engineering</p>
+                  <p className="text-[14px] text-orange-300">BSc. in Computer Science & Engineering</p>
                   <p className="text-sm text-gray-400 mt-2">University of Creative Technology, Chattogram</p>
                   <span className='flex gap-1 items-center text-gray-400 mt-1 text-sm'><Calendar className='w-4 h-4' /> 2022 - current</span>
                 </div>
@@ -100,7 +100,7 @@ const About = () => {
             </div>
 
             <a href="/resume.pdf" download>
-              <Button className="gradient-bg">
+              <Button className="bg-[#FAEB92]">
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </Button>
             </a>

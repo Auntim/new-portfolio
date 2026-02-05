@@ -53,7 +53,7 @@ const Header = ({ scrollY }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-xl md:text-2xl font-bold gradient-text bbh-regular ml-2 md:ml-4"
+          className="text-xl md:text-2xl font-bold text-[#F0FFC3] bbh-regular ml-2 md:ml-4"
         >
           AUNTIM.DEV
         </motion.a>
@@ -85,7 +85,7 @@ const Header = ({ scrollY }) => {
             ))}
 
           </nav>
-          <div className='ml-2'>
+          <div className='ml-4'>
             <ConfettiButton />
           </div>
 

@@ -20,7 +20,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="md:col-span-1"
           >
-            <h3 className="text-2xl font-bold gradient-text mb-2">Auntim Hossen Saikat</h3>
+            <h3 className="text-2xl font-bold text-[#ED985F] mb-2">Auntim Hossen Saikat</h3>
             <p className="text-sm text-muted-foreground">
               Frontend Developer
             </p>
