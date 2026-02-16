@@ -123,7 +123,7 @@ const Contact = () => {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start"
                 >
-                  <div className="p-3 rounded-md gradient-bg text-white mr-4">
+                  <div className="p-3 rounded-md bg-[#F7B980] text-black mr-4">
                     {info.icon}
                   </div>
                   <div>
@@ -139,7 +139,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="p-6 bg-secondary/50 rounded-xl border max-w-sm shadow-md">
+            <div className="p-6 bg-transparent/80 rounded-xl border max-w-sm shadow-md">
               <h4 className="font-bold mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 <a href="https://www.facebook.com/saikat.veer" className="p-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
@@ -164,7 +164,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-card rounded-xl p-6 shadow-md border">
+            <div className="bg-transparent/80 rounded-xl p-6 shadow-md border">
               <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -180,7 +180,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
                       placeholder="Enter Your Name"
                     />
                   </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
                       placeholder="abc@gmail.com"
                     />
                   </div>
@@ -212,7 +212,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
                     placeholder="Project Inquiry"
                   />
                 </div>
@@ -228,14 +228,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
                     placeholder="Hello, I'd like to discuss a project..."
                   ></textarea>
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full gradient-bg"
+                  className="w-full bg-[#F7B980]"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (

@@ -93,7 +93,7 @@ const Skills = () => {
               variants={item}
               className="bg-card rounded-xl p-6 shadow-md border card-hover"
             >
-              <div className="p-3 w-fit rounded-lg mb-4 gradient-bg text-white">
+              <div className="p-3 w-fit rounded-lg mb-4 bg-[#F7B980] text-black">
                 {category.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{category.title}</h3>

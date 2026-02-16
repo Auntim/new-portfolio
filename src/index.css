@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -12,7 +13,7 @@
 }
 
 .bbh-regular {
-  font-family: "BBH Sans Bartle", sans-serif;
+  font-family: "Playwrite CU Guides", cursive;
   font-weight: 400;
   font-style: normal;
 }

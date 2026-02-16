@@ -46,18 +46,10 @@ const Header = ({ scrollY }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
-
-        {/* <motion.a
-          href="#home"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-xl md:text-2xl font-bold text-[#F0FFC3] bbh-regular ml-2 md:ml-4"
-        >
-        </motion.a> */}
-        <img src={logo} className='h-8 w-8 md:h-12 md:w-12 ml-2 md:ml-12' alt="logo" />
-
-
+        <div className='flex justify-center items-center gap-1 cursor-pointer'>
+          <img src={logo} className='h-8 w-8 md:h-12 md:w-12 ml-2 md:ml-12 rounded-full' alt="logo" href='#home' />
+          <h1 className='text-2xl md:text-3xl bbh-regular'>Auntim</h1>
+        </div>
         <div className="flex items-center">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1 ">

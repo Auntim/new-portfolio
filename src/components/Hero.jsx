@@ -40,7 +40,7 @@ const Hero = () => {
                   texts={[
                     "Auntim Hossen Saikat",
                     "Full-Stack Enthusiast",
-                    'Web Developer'
+                    'Web_Developer'
                   ]}
                 />
               </span>

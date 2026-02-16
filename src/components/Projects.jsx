@@ -127,7 +127,7 @@ const Projects = () => {
             <motion.div
               key={project.id}
               variants={item}
-              className="bg-card rounded-xl overflow-hidden shadow-md card-hover border"
+              className="bg-transparent/80 rounded-xl overflow-hidden shadow-md card-hover border"
             >
               <div className="relative overflow-hidden h-48">
                 <img
@@ -155,12 +155,12 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-1 h-4 w-4" /> Live Demo
+                  <Button variant="outline" className='bg-[#f1be8e] text-black' size="sm" asChild>
+                    <a href={project.liveLink} className='bg-[#F7B980]' target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-1 h-4 w-4 " /> Live Demo
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className='bg-[#775331] text-white' asChild>
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-1 h-4 w-4" /> Code
                     </a>

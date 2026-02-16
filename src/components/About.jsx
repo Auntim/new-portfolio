@@ -74,7 +74,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Experience</h4>
-                  <p className="text-sm text-orange-300">2+ Years</p>
+                  <p className="text-sm text-[#FAEB92]">2+ Years</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Projects</h4>
-                  <p className="text-sm text-orange-300">18+ Completed</p>
+                  <p className="text-sm text-[#FAEB92]">18+ Completed</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -92,18 +92,19 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Education</h4>
-                  <p className="text-[14px] text-orange-300">BSc. in Computer Science & Engineering</p>
+                  <p className="text-[14px] text-[#FAEB92]">BSc. in Computer Science & Engineering</p>
                   <p className="text-sm text-gray-400 mt-2">University of Creative Technology, Chattogram</p>
-                  <span className='flex gap-1 items-center text-gray-400 mt-1 text-sm'><Calendar className='w-4 h-4' /> 2022 - current</span>
+                  <span className='flex gap-1 items-center text-gray-400 mt-1 text-sm'><Calendar className='w-4 h-4' /> 2022 - 2025</span>
                 </div>
               </div>
+              <div className='mt-4'>
+                <a href="/Simple-Resume.pdf" download>
+                  <Button className="bg-[#FAEB92]">
+                    <Download className="mr-2 h-4 w-4" /> Download Resume
+                  </Button>
+                </a>
+              </div>
             </div>
-
-            <a href="/resume.pdf" download>
-              <Button className="bg-[#FAEB92]">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </Button>
-            </a>
           </motion.div>
         </div>
       </div>
