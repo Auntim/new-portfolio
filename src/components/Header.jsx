@@ -3,8 +3,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Sun, Moon, Download, Link } from 'lucide-react';
-import { ThemeContext } from '@/App';
 import { ConfettiButton } from "@/components/lightswind/confetti-button";
+import logo from "@/assets/images/logo1.jpg"
 
 
 const navItems = [
@@ -18,7 +18,6 @@ const navItems = [
 const Header = ({ scrollY }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  // const { theme, toggleTheme } = useContext(ThemeContext);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -56,7 +55,7 @@ const Header = ({ scrollY }) => {
           className="text-xl md:text-2xl font-bold text-[#F0FFC3] bbh-regular ml-2 md:ml-4"
         >
         </motion.a> */}
-        <img src="/public/logo1.jpg" className='h-8 w-8 md:h-12 md:w-12 ml-2 md:ml-12' alt="logo" />
+        <img src={logo} className='h-8 w-8 md:h-12 md:w-12 ml-2 md:ml-12' alt="logo" />
 
 
         <div className="flex items-center">
