@@ -48,15 +48,15 @@ const Header = ({ scrollY }) => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
 
-        <motion.a
+        {/* <motion.a
           href="#home"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="text-xl md:text-2xl font-bold text-[#F0FFC3] bbh-regular ml-2 md:ml-4"
         >
-          AUNTIM.DEV
-        </motion.a>
+        </motion.a> */}
+        <img src="/public/logo1.jpg" className='h-8 w-8 md:h-12 md:w-12 ml-2 md:ml-12' alt="logo" />
 
 
         <div className="flex items-center">
@@ -69,7 +69,7 @@ const Header = ({ scrollY }) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeSection === item.href.substring(1)
+                className={`px-4 py-1 rounded-md text-sm font-medium transition-colors ${activeSection === item.href.substring(1)
                   ? 'text-primary font-semibold border-b-2 border-primary pb-1'
                   : 'text-muted-foreground hover:text-primary hover:text-slate-100'
                   }`}
@@ -85,7 +85,7 @@ const Header = ({ scrollY }) => {
             ))}
 
           </nav>
-          <div className='ml-4'>
+          <div className='ml-4 hidden md:inline-block'>
             <ConfettiButton />
           </div>
 
@@ -113,12 +113,12 @@ const Header = ({ scrollY }) => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-background border-t"
           >
-            <nav className=" py-4 flex flex-col space-y-2">
+            <nav className=" py-2 flex flex-col space-y-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`px-4 py-3 rounded-md text-base font-medium ${activeSection === item.href.substring(1)
+                  className={`px-4 py-2 rounded-md text-base font-medium ${activeSection === item.href.substring(1)
                     ? 'bg-secondary text-primary'
                     : 'text-muted-foreground hover:text-primary hover:bg-secondary'
                     }`}

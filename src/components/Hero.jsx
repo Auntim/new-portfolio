@@ -104,12 +104,12 @@ const Hero = () => {
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 mt-6 md:mt-0"></div>
-              <div className="relative overflow-hidden rounded-xl md:rounded-full border-4 border-white shadow-lg ">
+              <div className="absolute -inset-0.5  rounded-full blur opacity-75 mt-6 md:mt-0"></div>
+              {/* <div className="relative overflow-hidden rounded-xl md:rounded-full border-4 border-white shadow-lg ">
                 <img alt="Professional portrait" className="w-80 h-80 md:w-[400px] md:h-[400px] object-cover" src={image1} />
 
-              </div>
-              {/* <ThreeDCarousel /> */}
+              </div> */}
+              <ThreeDCarousel />
             </div>
           </motion.div>
 
