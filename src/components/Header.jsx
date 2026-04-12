@@ -44,15 +44,15 @@ const Header = ({ scrollY }) => {
   }, [scrollY]);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container-custom flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? ' shadow-sm' : 'bg-transparent'}`}>
+      <div className="w-full md:w-[80%] mx-auto flex items-center justify-between  pt-2 px-4 sm:px-6 lg:px-8">
         <div className='flex justify-center items-center gap-1 cursor-pointer'>
-          <img src={logo} className='h-8 w-8 md:h-12 md:w-12 ml-2 md:ml-12 rounded-full' alt="logo" href='#home' />
+          <img src={logo} className='h-8 w-8 md:h-11 md:w-11 ml-2 md:ml-12 rounded-full' alt="logo" href='#home' />
           <h1 className='text-2xl md:text-3xl bbh-regular'>Auntim</h1>
         </div>
         <div className="flex items-center">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 ">
+          <nav className="hidden md:flex items-center  space-x-1 bg-white/10 backdrop-blur-md transition rounded-full px-2 py-3">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -61,8 +61,8 @@ const Header = ({ scrollY }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className={`px-4 py-1 rounded-md text-sm font-medium transition-colors ${activeSection === item.href.substring(1)
-                  ? 'text-primary font-semibold border-b-2 border-primary pb-1'
-                  : 'text-muted-foreground hover:text-primary hover:text-slate-100'
+                  ? 'text-white font-semibold border-b-2 border-primary pb-1'
+                  : 'text-white hover:text-primary hover:text-slate-100'
                   }`}
                 onClick={(e) => {
                   e.preventDefault();
@@ -76,9 +76,9 @@ const Header = ({ scrollY }) => {
             ))}
 
           </nav>
-          <div className='ml-4 hidden md:inline-block'>
+          {/* <div className='ml-4 hidden md:inline-block'>
             <ConfettiButton />
-          </div>
+          </div> */}
 
 
           {/* Mobile Menu Button */}
