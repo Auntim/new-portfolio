@@ -87,11 +87,11 @@ const Header = ({ scrollY }) => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden ml-2"
+            className="md:hidden ml-2 bg-gray-800 border-2 border-gray-600 rounded-full"
             onClick={toggleMenu}
-            aria-label="Toggle menu"
+            aria-label=""
           >
-            {isMenuOpen ? <X size={24} /> : <ArrowBigDown size={24} />}
+            {isMenuOpen ? <X size={24} /> : <ArrowBigDown size={20} />}
           </Button>
         </div>
       </div>
