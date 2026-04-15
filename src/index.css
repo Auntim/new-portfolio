@@ -171,3 +171,16 @@ html {
 .container-custom {
   @apply container mx-auto px-4 sm:px-6 lg:px-8;
 }
+
+::selection {
+  background: rgb(247, 247, 15);
+  color: black;
+  font-weight: bold;
+
+}
+
+::-moz-selection {
+  background: rgb(97, 97, 5);
+  color: black;
+  font-weight: bold;
+}

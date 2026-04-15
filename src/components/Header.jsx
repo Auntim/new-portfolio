@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Sun, Moon, Download, Link } from 'lucide-react';
+import { Menu, X, Sun, Moon, Download, Link, ArrowBigDown } from 'lucide-react';
 import { ConfettiButton } from "@/components/lightswind/confetti-button";
 import logo from "@/assets/images/logo1.jpg"
 
@@ -20,6 +20,8 @@ const Header = ({ scrollY }) => {
   const [activeSection, setActiveSection] = useState('home');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,14 +47,14 @@ const Header = ({ scrollY }) => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? ' shadow-sm' : 'bg-transparent'}`}>
-      <div className="w-full md:w-[80%] mx-auto flex items-center justify-between  pt-2 px-4 sm:px-6 lg:px-8">
+      <div className="w-full md:w-[90%] mx-auto flex items-center justify-between  pt-2 px-4 sm:px-6 lg:px-8">
         <div className='flex justify-center items-center gap-1 cursor-pointer'>
           <img src={logo} className='h-8 w-8 md:h-11 md:w-11 ml-2 md:ml-12 rounded-full' alt="logo" href='#home' />
           <h1 className='text-2xl md:text-3xl bbh-regular'>Auntim</h1>
         </div>
         <div className="flex items-center">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center  space-x-1 bg-white/10 backdrop-blur-md transition rounded-full px-2 py-3">
+          <nav className="hidden md:flex items-center  space-x-1 bg-white/30 backdrop-blur-md transition rounded-full px-2 py-2">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -60,7 +62,7 @@ const Header = ({ scrollY }) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className={`px-4 py-1 rounded-md text-sm font-medium transition-colors ${activeSection === item.href.substring(1)
+                className={`px-4 py-1 rounded-md text-18px font-medium transition-colors ${activeSection === item.href.substring(1)
                   ? 'text-white font-semibold border-b-2 border-primary pb-1'
                   : 'text-white hover:text-primary hover:text-slate-100'
                   }`}
@@ -89,7 +91,7 @@ const Header = ({ scrollY }) => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} /> : <ArrowBigDown size={24} />}
           </Button>
         </div>
       </div>
@@ -102,16 +104,16 @@ const Header = ({ scrollY }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-background border-t"
+            className="md:hidden bg-white/20 backdrop-blur-lg border-t w-[40%]  mx-auto flex-end mt-1 rounded-lg shadow-lg"
           >
-            <nav className=" py-2 flex flex-col space-y-1">
+            <nav className=" py-2 flex flex-col items-center justify-center space-y-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   className={`px-4 py-2 rounded-md text-base font-medium ${activeSection === item.href.substring(1)
-                    ? 'bg-secondary text-primary'
-                    : 'text-muted-foreground hover:text-primary hover:bg-secondary'
+                    ? ' text-white'
+                    : 'text-white hover:text-orange-600 hover:scale-110 transition-transform'
                     }`}
                   onClick={(e) => {
                     e.preventDefault();
