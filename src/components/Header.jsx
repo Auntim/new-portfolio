@@ -104,7 +104,8 @@ const Header = ({ scrollY }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/20 backdrop-blur-lg border-t w-[40%]  mx-auto flex-end mt-1 rounded-lg shadow-lg"
+            className="md:hidden bg-white/20 backdrop-blur-lg border-t w-[45%] border-white  mx-auto  mt-1 rounded-lg shadow-lg
+             flex flex-col items-center justify-center mr-16"
           >
             <nav className=" py-2 flex flex-col items-center justify-center space-y-1">
               {navItems.map((item) => (

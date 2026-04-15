@@ -82,7 +82,7 @@ const Hero = () => {
         }}
       >
         <div className="px-4 sm:px-6 lg:px-8 w-full sm:w-11/12 lg:w-10/12 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold  text-white"
               >
                 Hi, I'm{" "}
                 <span className="text-[#ED985F]">
@@ -112,7 +112,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-lg text-gray-400 mb-8 max-w-lg mt-8 text-justify leading-tight tracking-wider"
+                className="text-lg text-gray-400 mb-8 max-w-lg mt-3 text-justify leading-tight tracking-wider"
               >
                 I create beautiful, functional, and user-friendly digital experiences. With expertise in both frontend and backend technologies, I bring ideas to life.
               </motion.p>
@@ -166,7 +166,7 @@ const Hero = () => {
               className="order-1 lg:order-2 flex justify-center"
             >
               <div className="relative">
-                <div className="absolute -inset-0.5 rounded-full blur opacity-75 mt-6 md:mt-0"></div>
+                <div className="absolute -inset-0.5 rounded-full blur opacity-75 mt-4 md:mt-0"></div>
                 <ThreeDCarousel />
               </div>
             </motion.div>
