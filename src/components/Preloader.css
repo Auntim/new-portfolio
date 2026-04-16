@@ -1,0 +1,33 @@
+.preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    color: rgb(248, 203, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.preloader-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(172, 59, 6);
+    border-radius: 50%;
+}
+
+.preloader-text {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}

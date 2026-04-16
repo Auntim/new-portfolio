@@ -12,12 +12,14 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer.jsx';
 import { ChevronUp } from 'lucide-react';
 import TargetCursor from './components/TargetCursor';
+import Preloader from './components/Preloader';
 
 export const ThemeContext = React.createContext();
 
 function App() {
   const { toast } = useToast();
   const [scrollY, setScrollY] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState(() => {
     const localTheme = localStorage.getItem('theme');
     if (localTheme) {
@@ -52,7 +54,17 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="roboto min-h-screen bg-background">
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <Preloader key="preloader" onFinish={() => setIsLoading(false)} />
+        )}
+      </AnimatePresence>
+      <div className="roboto min-h-screen bg-background"
+        style={{
+          height: isLoading ? '100vh' : 'auto',
+          overflow: isLoading ? 'hidden' : 'visible',
+        }}
+      >
         <TargetCursor
           spinDuration={2}
           hideDefaultCursor
@@ -73,21 +85,7 @@ function App() {
         <Footer />
         <Toaster />
 
-        <AnimatePresence>
-          {scrollY > 300 && (
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.3 }}
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="fixed bottom-8 right-8 p-3 rounded-full bg-primary text-primary-foreground shadow-lg z-50 hover:bg-primary/90 transition-colors"
-              aria-label="Scroll to top"
-            >
-              <ChevronUp size={24} />
-            </motion.button>
-          )}
-        </AnimatePresence>
+
       </div>
     </ThemeContext.Provider>
   );
