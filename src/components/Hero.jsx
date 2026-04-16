@@ -6,6 +6,7 @@ import image1 from '@/assets/images/profile4.png';
 import ThreeDCarousel from './ThreeDCarousel';
 import TypingText from './TypingText';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import Antigravity from './Antigravity';
 
 const Hero = () => {
   // State for AI Sidebar
@@ -70,13 +71,14 @@ const Hero = () => {
 
   return (
     <>
-      {/* --- YOUR ORIGINAL HERO SECTION --- */}
+
+
       <section id="home" className="min-h-screen flex mx-auto items-center hero-pattern section-padding pt-24 overflow-hidden w-screen"
         style={{
           background: "#000000",
           backgroundImage: `
-          radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
-        `,
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
           backgroundSize: "30px 30px",
           backgroundPosition: "0 0",
         }}
@@ -125,7 +127,7 @@ const Hero = () => {
               >
                 <Button
                   size="lg"
-                  className="rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none bg-[#F7B980] hover:bg-[#ED985F] text-[#000000] text-sm font-semibold transition-colors"
+                  className="rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none bg-[#F7B980] hover:bg-[#ED985F] text-[#000000] text-sm font-semibold transition-colors cursor-target"
                   onClick={() => document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })}
                 >
                   View My Work <ArrowRight className="ml-2 h-4 w-4" />
@@ -135,7 +137,7 @@ const Hero = () => {
                   variant="outline"
                   size="lg"
                   onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}
-                  className="rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none text-white border-white hover:bg-white hover:text-black transition-colors"
+                  className="rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none text-white border-white hover:bg-slate-950  transition-colors cursor-target"
                 >
                   Contact Me
                 </Button>
@@ -173,6 +175,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
+
 
       {/* --- NEW: FLOATING BUTTONS (BOTTOM RIGHT) --- */}
       <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4">

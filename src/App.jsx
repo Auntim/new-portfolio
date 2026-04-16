@@ -11,6 +11,7 @@ import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer.jsx';
 import { ChevronUp } from 'lucide-react';
+import TargetCursor from './components/TargetCursor';
 
 export const ThemeContext = React.createContext();
 
@@ -52,6 +53,13 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="roboto min-h-screen bg-background">
+        <TargetCursor
+          spinDuration={2}
+          hideDefaultCursor
+          parallaxOn
+          hoverDuration={0.2}
+        />
+
         <Header scrollY={scrollY} />
 
         <main className='roboto'>

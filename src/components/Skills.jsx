@@ -85,13 +85,13 @@ const Skills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 "
         >
           {skillsCategories.map((category, index) => (
             <motion.div
               key={index}
               variants={item}
-              className="bg-card rounded-xl p-6 shadow-md border card-hover"
+              className="bg-card rounded-xl p-6 shadow-md border card-hover cursor-target"
             >
               <div className="p-3 w-fit rounded-lg mb-4 bg-[#F7B980] text-black">
                 {category.icon}

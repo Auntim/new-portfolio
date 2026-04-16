@@ -60,8 +60,8 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-4">Who Am I,</h3>
-            <p className="text-muted-foreground mb-6 text-wrap text-justify">
-              I'm a <span className='text-orange-500'>Frontend developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
+            <p className="text-muted-foreground mb-6 text-wrap text-justify ">
+              I'm a <span className='text-orange-500 cursor-target'>Full-Stack developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
             </p>
             <p className="text-muted-foreground mb-6 text-justify">
               I specialize in creating responsive, accessible, and performant web applications using modern technologies. My approach combines technical expertise with a deep understanding of user needs to deliver solutions that not only work flawlessly but also provide exceptional user experiences.
@@ -99,7 +99,7 @@ const About = () => {
               </div>
               <div className='mt-4'>
                 <a href="/Simple-Resume.pdf" download>
-                  <Button className="bg-[#FAEB92]">
+                  <Button className="bg-[#FAEB92] hover:bg-slate-950 hover:text-slate-300 rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none cursor-target">
                     <Download className="mr-2 h-4 w-4" /> Download Resume
                   </Button>
                 </a>

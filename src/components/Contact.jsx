@@ -180,7 +180,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none cursor-target text-black"
                       placeholder="Enter Your Name"
                     />
                   </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
+                      className="w-full px-4 py-2 cursor-target border rounded-md focus:outline-none  text-black"
                       placeholder="abc@gmail.com"
                     />
                   </div>
@@ -212,7 +212,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
+                    className="w-full px-4 py-2 cursor-target border rounded-md focus:outline-none  text-black"
                     placeholder="Project Inquiry"
                   />
                 </div>
@@ -228,14 +228,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none  text-black"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none cursor-target text-black"
                     placeholder="Hello, I'd like to discuss a project..."
                   ></textarea>
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-[#F7B980]"
+                  className="w-full bg-[#F7B980] cursor-target hover:bg-slate-950 hover:text-slate-400"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -247,7 +247,7 @@ const Contact = () => {
                       Sending...
                     </span>
                   ) : (
-                    <span className="flex items-center">
+                    <span className="flex items-center ">
                       <Send className="mr-2 h-4 w-4" /> Send Message
                     </span>
                   )}

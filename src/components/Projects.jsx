@@ -121,13 +121,13 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 "
         >
           {projectsData.map((project) => (
             <motion.div
               key={project.id}
               variants={item}
-              className="bg-transparent/80 rounded-xl overflow-hidden shadow-md card-hover border"
+              className="bg-transparent/80 rounded-xl overflow-hidden shadow-md card-hover border hover:scale-105 transition-all"
             >
               <div className="relative overflow-hidden h-48">
                 <img
@@ -155,12 +155,12 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button variant="outline" className='bg-[#f1be8e] text-black' size="sm" asChild>
-                    <a href={project.liveLink} className='bg-[#F7B980]' target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className='bg-[#f1be8e] hover:bg-slate-950 text-black' size="sm" asChild>
+                    <a href={project.liveLink} className='bg-[#F7B980] cursor-target' target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-1 h-4 w-4 " /> Live Demo
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" className='bg-[#775331] text-white' asChild>
+                  <Button variant="outline" size="sm" className='cursor-target bg-[#633001] text-white hover:bg-slate-950' asChild>
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-1 h-4 w-4" /> Code
                     </a>

@@ -48,8 +48,8 @@ const Header = ({ scrollY }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden ${scrollY > 50 ? ' shadow-sm' : 'bg-transparent'}`}>
       <div className="w-full md:w-[90%] mx-auto flex items-center justify-between  pt-2 px-4 sm:px-6 lg:px-8">
-        <div className='flex justify-center items-center gap-1 cursor-pointer'>
-          <img src={logo} className='h-8 w-8 md:h-11 md:w-11 ml-2 md:ml-12 rounded-full' alt="logo" href='#home' />
+        <div className='flex justify-center items-center gap-1 cursor-target'>
+          <img src={logo} className='h-8 w-8 md:h-11 md:w-11 ml-2  rounded-full' alt="logo" href='#home' />
           <h1 className='text-2xl md:text-3xl bbh-regular'>Auntim</h1>
         </div>
         <div className="flex items-center">
@@ -62,7 +62,7 @@ const Header = ({ scrollY }) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className={`px-4 py-1 rounded-md text-18px font-medium transition-colors ${activeSection === item.href.substring(1)
+                className={`px-4 py-1 rounded-md text-18px font-medium transition-colors cursor-target ${activeSection === item.href.substring(1)
                   ? 'text-white font-semibold border-b-2 border-primary pb-1'
                   : 'text-white hover:text-primary hover:text-slate-100'
                   }`}
@@ -87,7 +87,7 @@ const Header = ({ scrollY }) => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden ml-2 bg-gray-800 border-2 border-gray-600 rounded-full"
+            className="md:hidden ml-2 bg-gray-800 border-2 border-gray-600 rounded-full cursor-target"
             onClick={toggleMenu}
             aria-label=""
           >
@@ -112,7 +112,7 @@ const Header = ({ scrollY }) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`px-4 py-2 rounded-md text-base font-medium ${activeSection === item.href.substring(1)
+                  className={`px-4 py-2 rounded-md text-base font-medium cursor-target ${activeSection === item.href.substring(1)
                     ? ' text-white'
                     : 'text-white hover:text-orange-600 hover:scale-110 transition-transform'
                     }`}
