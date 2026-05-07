@@ -88,13 +88,21 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-padding"
+      // style={{
+      //   background: "#000000",
+      //   backgroundImage: `
+      //   radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      // `,
+      //   backgroundSize: "30px 30px",
+      //   backgroundPosition: "0 0",
+      // }}
       style={{
         background: "#000000",
         backgroundImage: `
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+        linear-gradient(to right, rgba(75, 85, 99, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(75, 85, 99, 0.4) 1px, transparent 1px)
       `,
-        backgroundSize: "30px 30px",
-        backgroundPosition: "0 0",
+        backgroundSize: "40px 40px",
       }}
     >
       <div className="container-custom">

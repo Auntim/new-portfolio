@@ -13,6 +13,7 @@ import Footer from '@/components/Footer.jsx';
 import { ChevronUp } from 'lucide-react';
 import TargetCursor from './components/TargetCursor';
 import Preloader from './components/Preloader';
+import Skiper from './components/Skiper';
 
 export const ThemeContext = React.createContext();
 
@@ -60,10 +61,11 @@ function App() {
         )}
       </AnimatePresence>
       <div className="roboto min-h-screen bg-background"
-        style={{
-          height: isLoading ? '100vh' : 'auto',
-          overflow: isLoading ? 'hidden' : 'visible',
-        }}
+      // style={{
+      //   height: isLoading ? '100vh' : 'auto',
+      //   overflow: isLoading ? 'hidden' : 'visible',
+      // }}
+
       >
         <TargetCursor
           spinDuration={2}
@@ -77,7 +79,8 @@ function App() {
         <main className='roboto'>
           <Hero />
           <About />
-          <Projects />
+          {/* <Projects /> */}
+          <Skiper />
           <Skills />
           <Contact />
         </main>

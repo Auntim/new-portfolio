@@ -5,6 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap');
+
+.rubik {
+  font-family: "Rubik Storm", system-ui;
+  font-weight: 400;
+}
 
 .roboto {
   font-family: "Roboto Condensed", sans-serif;
@@ -133,25 +139,6 @@ html {
   }
 }
 
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
-}
-
-.gradient-text2 {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-purple-700 to-blue-500;
-}
-
-.dark .gradient-text {
-  @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400;
-}
-
-.gradient-bg {
-  @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:opacity-90;
-}
-
-.dark .gradient-bg {
-  @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-primary-foreground hover:opacity-90;
-}
 
 .hero-pattern {
   background-color: var(--hero-pattern-bg);

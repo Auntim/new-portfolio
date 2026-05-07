@@ -81,10 +81,10 @@ const Contact = () => {
       style={{
         background: "#000000",
         backgroundImage: `
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+        linear-gradient(to right, rgba(75, 85, 99, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(75, 85, 99, 0.4) 1px, transparent 1px)
       `,
-        backgroundSize: "30px 30px",
-        backgroundPosition: "0 0",
+        backgroundSize: "40px 40px",
       }}
     >
       <div className="container-custom">
@@ -130,7 +130,7 @@ const Contact = () => {
                     <h4 className="font-medium text-lg">{info.title}</h4>
                     <a
                       href={info.link}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors cursor-target"
                     >
                       {info.value}
                     </a>

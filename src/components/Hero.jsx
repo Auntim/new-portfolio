@@ -72,16 +72,16 @@ const Hero = () => {
   return (
     <>
 
-
       <section id="home" className="min-h-screen flex mx-auto items-center hero-pattern section-padding pt-24 overflow-hidden w-screen"
         style={{
           background: "#000000",
           backgroundImage: `
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+        linear-gradient(to right, rgba(75, 85, 99, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(75, 85, 99, 0.4) 1px, transparent 1px)
       `,
-          backgroundSize: "30px 30px",
-          backgroundPosition: "0 0",
+          backgroundSize: "40px 40px",
         }}
+
       >
         <div className="px-4 sm:px-6 lg:px-8 w-full sm:w-11/12 lg:w-10/12 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
@@ -194,7 +194,7 @@ const Hero = () => {
           href="https://wa.me/01871853590"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform hover:scale-110 z-50"
+          className="w-12 h-12 cursor-target bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform hover:scale-110 z-50"
           title="WhatsApp Me"
         >
           <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
@@ -280,3 +280,10 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+
+
+

@@ -13,13 +13,22 @@ const About = () => {
 
   return (
     <section id="about" className="section-padding bg-secondary/30"
+      // style={{
+      //   background: "#000000",
+      //   backgroundImage: `
+      //   radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      // `,
+      //   backgroundSize: "30px 30px",
+      //   backgroundPosition: "0 0",
+      // }}
+
       style={{
         background: "#000000",
         backgroundImage: `
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+        linear-gradient(to right, rgba(75, 85, 99, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(75, 85, 99, 0.4) 1px, transparent 1px)
       `,
-        backgroundSize: "30px 30px",
-        backgroundPosition: "0 0",
+        backgroundSize: "40px 40px",
       }}
     >
       <div className="container-custom"
@@ -60,10 +69,10 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-4">Who Am I,</h3>
-            <p className="text-muted-foreground mb-6 text-wrap text-justify ">
+            <p className="text-muted-foreground mb-6 text-wrap text-justify bg-black">
               I'm a <span className='text-orange-500 cursor-target'>Full-Stack developer</span> with over 2 years of experience building web applications and digital products. My journey in tech began with a curiosity about how things work on the web, which led me to pursue a degree in Computer Science.
             </p>
-            <p className="text-muted-foreground mb-6 text-justify">
+            <p className="text-muted-foreground mb-6 text-justify bg-black">
               I specialize in creating responsive, accessible, and performant web applications using modern technologies. My approach combines technical expertise with a deep understanding of user needs to deliver solutions that not only work flawlessly but also provide exceptional user experiences.
             </p>
 

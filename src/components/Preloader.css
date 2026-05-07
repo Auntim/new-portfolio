@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap');
+
+.rubik {
+    font-family: "Rubik Storm", system-ui;
+    font-weight: 500;
+    font-size: 4rem;
+
+}
+
 .preloader-container {
     position: fixed;
     top: 0;
@@ -19,15 +28,8 @@
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: rgb(172, 59, 6);
     border-radius: 50%;
-}
-
-.preloader-text {
-    font-size: 4rem;
-    font-weight: 600;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
 }

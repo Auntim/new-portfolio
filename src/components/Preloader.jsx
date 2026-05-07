@@ -33,12 +33,12 @@ const Preloader = ({ onFinish }) => {
 
     return (
         <motion.div
-            className="preloader-container"
+            className="preloader-container rubik"
             // Animation for when the preloader finally disappears
             initial={{ y: 0 }}
             exit={{ y: "-100vh", transition: { duration: 0.8, ease: "easeInOut" } }}
         >
-            <div className="preloader-text-wrapper">
+            <div className="preloader-text-wrapper rubik">
                 {/* The dot before the text (optional, looks cool) */}
                 <span className="dot"></span>
                 <motion.p
@@ -46,7 +46,7 @@ const Preloader = ({ onFinish }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.1 }}
-                    className="preloader-text"
+                    className="rubik"
                 >
                     {greetings[index]}
                 </motion.p>
